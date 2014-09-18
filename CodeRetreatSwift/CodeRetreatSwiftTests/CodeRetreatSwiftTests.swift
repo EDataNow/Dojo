@@ -9,7 +9,7 @@
 import Quick
 import Nimble
 
-class DolphinSpec: QuickSpec {
+class GameOfLifeSpec: QuickSpec {
     override func spec() {
         it("is friendly") {
             expect(GameOfLife().test).to(equal(1))
