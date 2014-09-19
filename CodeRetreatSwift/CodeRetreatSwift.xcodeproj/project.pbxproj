@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		85592AF019CCE0A0004D235B /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3CE842B19CB712E00AD7A6D /* Nimble.framework */; };
+		85592AF119CCE0A9004D235B /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3CE841C19CB712500AD7A6D /* Quick.framework */; };
 		C3CE83F419CB70FF00AD7A6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CE83F319CB70FF00AD7A6D /* AppDelegate.swift */; };
 		C3CE83F619CB70FF00AD7A6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CE83F519CB70FF00AD7A6D /* ViewController.swift */; };
 		C3CE83F919CB70FF00AD7A6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3CE83F719CB70FF00AD7A6D /* Main.storyboard */; };
 		C3CE83FB19CB70FF00AD7A6D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3CE83FA19CB70FF00AD7A6D /* Images.xcassets */; };
 		C3CE83FE19CB70FF00AD7A6D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3CE83FC19CB70FF00AD7A6D /* LaunchScreen.xib */; };
 		C3CE840A19CB70FF00AD7A6D /* CodeRetreatSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CE840919CB70FF00AD7A6D /* CodeRetreatSwiftTests.swift */; };
-		C3CE843219CB713500AD7A6D /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3CE842B19CB712E00AD7A6D /* Nimble.framework */; };
-		C3CE843319CB713900AD7A6D /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3CE841C19CB712500AD7A6D /* Quick.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,8 +110,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3CE843319CB713900AD7A6D /* Quick.framework in Frameworks */,
-				C3CE843219CB713500AD7A6D /* Nimble.framework in Frameworks */,
+				85592AF119CCE0A9004D235B /* Quick.framework in Frameworks */,
+				85592AF019CCE0A0004D235B /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,6 +562,7 @@
 				C3CE840F19CB70FF00AD7A6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C3CE841019CB70FF00AD7A6D /* Build configuration list for PBXNativeTarget "CodeRetreatSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -570,6 +571,7 @@
 				C3CE841219CB70FF00AD7A6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

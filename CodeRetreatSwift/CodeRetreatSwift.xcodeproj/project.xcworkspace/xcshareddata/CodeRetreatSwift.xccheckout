@@ -6,28 +6,44 @@
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>CE5C5451-85D5-4830-97EA-05ACC8CC5466</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CodeRetreatSwift</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>29479AAAAB3FCD97106F6EC9354468ED9DCACC25</key>
+		<string>github.com:EDataNow/Dojo.git</string>
 		<key>95438028B10BBB846574013D29F154A00556A9D1</key>
 		<string>github.com:Quick/Nimble.git</string>
 		<key>D0725CAC6FF2D66F2C83C2C48DC12106D42DAA64</key>
 		<string>github.com:Quick/Quick.git</string>
 	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CodeRetreatSwift/CodeRetreatSwift.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>29479AAAAB3FCD97106F6EC9354468ED9DCACC25</key>
+		<string>../../..</string>
 		<key>95438028B10BBB846574013D29F154A00556A9D1</key>
-		<string>Nimble/</string>
+		<string>../../../../Nimble</string>
 		<key>D0725CAC6FF2D66F2C83C2C48DC12106D42DAA64</key>
-		<string>Quick/</string>
+		<string>../../../../Quick</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>github.com:Quick/Nimble.git</string>
+	<string>github.com:EDataNow/Dojo.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>95438028B10BBB846574013D29F154A00556A9D1</string>
+	<string>29479AAAAB3FCD97106F6EC9354468ED9DCACC25</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>29479AAAAB3FCD97106F6EC9354468ED9DCACC25</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Dojo</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
