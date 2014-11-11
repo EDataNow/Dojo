@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		854704E91A12A79A00FD8AB9 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 854704E21A12A78200FD8AB9 /* Nimble.framework */; };
 		854704EA1A12A79E00FD8AB9 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 854704D31A12A77100FD8AB9 /* Quick.framework */; };
-		854704EC1A12A7D900FD8AB9 /* CodeRetreatTEst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854704EB1A12A7D900FD8AB9 /* CodeRetreatTEst.swift */; };
+		854704EC1A12A7D900FD8AB9 /* CodeRetreatSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854704EB1A12A7D900FD8AB9 /* CodeRetreatSpec.swift */; };
 		C3CE83F419CB70FF00AD7A6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CE83F319CB70FF00AD7A6D /* AppDelegate.swift */; };
 		C3CE83F619CB70FF00AD7A6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CE83F519CB70FF00AD7A6D /* ViewController.swift */; };
 		C3CE83F919CB70FF00AD7A6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3CE83F719CB70FF00AD7A6D /* Main.storyboard */; };
@@ -86,7 +86,8 @@
 /* Begin PBXFileReference section */
 		854704CA1A12A77100FD8AB9 /* Quick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Quick.xcodeproj; path = Vendor/Quick/Quick.xcodeproj; sourceTree = SOURCE_ROOT; };
 		854704DA1A12A78200FD8AB9 /* Nimble.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nimble.xcodeproj; path = Vendor/Nimble/Nimble.xcodeproj; sourceTree = SOURCE_ROOT; };
-		854704EB1A12A7D900FD8AB9 /* CodeRetreatTEst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeRetreatTEst.swift; sourceTree = "<group>"; };
+		854704EB1A12A7D900FD8AB9 /* CodeRetreatSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeRetreatSpec.swift; sourceTree = "<group>"; };
+		854704ED1A12A91800FD8AB9 /* CodeRetreat.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CodeRetreat.playground; sourceTree = "<group>"; };
 		C3CE83EE19CB70FF00AD7A6D /* CodeRetreatSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeRetreatSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3CE83F219CB70FF00AD7A6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3CE83F319CB70FF00AD7A6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -185,7 +186,8 @@
 				854704DA1A12A78200FD8AB9 /* Nimble.xcodeproj */,
 				854704CA1A12A77100FD8AB9 /* Quick.xcodeproj */,
 				C3CE840719CB70FF00AD7A6D /* Supporting Files */,
-				854704EB1A12A7D900FD8AB9 /* CodeRetreatTEst.swift */,
+				854704EB1A12A7D900FD8AB9 /* CodeRetreatSpec.swift */,
+				854704ED1A12A91800FD8AB9 /* CodeRetreat.playground */,
 			);
 			path = CodeRetreatSwiftTests;
 			sourceTree = "<group>";
@@ -376,7 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				854704EC1A12A7D900FD8AB9 /* CodeRetreatTEst.swift in Sources */,
+				854704EC1A12A7D900FD8AB9 /* CodeRetreatSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
