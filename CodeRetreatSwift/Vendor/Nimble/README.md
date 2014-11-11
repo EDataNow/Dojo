@@ -1,5 +1,7 @@
 # Nimble
 
+[![Build Status](https://travis-ci.org/Quick/Nimble.svg?branch=master)](https://travis-ci.org/Quick/Nimble)
+
 Use Nimble to express the expected outcomes of Swift
 or Objective-C expressions. Inspired by
 [Cedar](https://github.com/pivotal/cedar).
@@ -223,9 +225,7 @@ without explicitly specifying both types:
 ```swift
 // Swift
 
-// Both of these work:
 expect(1 as CInt).to(equal(1))
-expect(1).to(equal(1 as CInt))
 ```
 
 > In Objective-C, Nimble only supports Objective-C objects. To
@@ -520,8 +520,14 @@ expect(dolphin).to(beAKindOf([Mammal class]));
 // Passes if actual is not nil, false, or an object with a boolean value of false:
 expect(actual).to(beTruthy())
 
+// Passes if actual is only true (not nil or an object conforming to BooleanType true):
+expect(actual).to(beTrue())
+
 // Passes if actual is nil, false, or an object with a boolean value of false:
 expect(actual).to(beFalsy())
+
+// Passes if actual is only false (not nil or an object conforming to BooleanType false):
+expect(actual).to(beFalse())
 
 // Passes if actual is nil:
 expect(actual).to(beNil())
@@ -533,8 +539,14 @@ expect(actual).to(beNil())
 // Passes if actual is not nil, false, or an object with a boolean value of false:
 expect(actual).to(beTruthy());
 
+// Passes if actual is only true (not nil or an object conforming to BooleanType true):
+expect(actual).to(beTrue());
+
 // Passes if actual is nil, false, or an object with a boolean value of false:
 expect(actual).to(beFalsy());
+
+// Passes if actual is only false (not nil or an object conforming to BooleanType false):
+expect(actual).to(beFalse());
 
 // Passes if actual is nil:
 expect(actual).to(beNil());
@@ -655,6 +667,9 @@ expect(actual).to(endWith(expected))
 
 // Passes if actual is an empty string, "":
 expect(actual).to(beEmpty())
+
+// Passes if actual matches the regular expression defined in expected:
+expect(actual).to(match(expected))
 ```
 
 ```objc
@@ -671,6 +686,9 @@ expect(actual).to(endWith(expected));
 
 // Passes if actual is an empty string, "":
 expect(actual).to(beEmpty());
+
+// Passes if actual matches the regular expression defined in expected:
+expect(actual).to(match(expected))
 ```
 
 # Writing Your Own Matchers
@@ -757,7 +775,7 @@ By default, Nimble outputs the following failure message when an
 expectation fails:
 
 ```
-expected <\(actual)> to match
+expected to match, got <\(actual)>
 ```
 
 You can customize this message by modifying the `failureMessage` struct
@@ -767,7 +785,7 @@ something else, update the `postfixMessage` property:
 ```swift
 // Swift
 
-// Outputs: expected <\(actual)> to be under the sea
+// Outputs: expected to be under the sea, got <\(actual)>
 failureMessage.postfixMessage = "be under the sea"
 ```
 

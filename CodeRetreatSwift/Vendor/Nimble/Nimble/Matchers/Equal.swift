@@ -1,9 +1,9 @@
 import Foundation
 
 
-public func equal<T: Equatable>(expectedValue: T?) -> MatcherFunc<T?> {
+public func equal<T: Equatable>(expectedValue: T?) -> MatcherFunc<T> {
     return MatcherFunc { actualExpression, failureMessage in
-        failureMessage.postfixMessage = "equal <\(expectedValue)>"
+        failureMessage.postfixMessage = "equal <\(stringify(expectedValue))>"
         let matches = actualExpression.evaluate() == expectedValue && expectedValue != nil
         if expectedValue == nil || actualExpression.evaluate() == nil {
             failureMessage.postfixMessage += " (will not match nils, use beNil() instead)"
@@ -14,9 +14,9 @@ public func equal<T: Equatable>(expectedValue: T?) -> MatcherFunc<T?> {
 }
 
 // perhaps try to extend to SequenceOf or Sequence types instead of dictionaries
-public func equal<T: Equatable, C: Equatable>(expectedValue: [T: C]?) -> MatcherFunc<[T: C]?> {
+public func equal<T: Equatable, C: Equatable>(expectedValue: [T: C]?) -> MatcherFunc<[T: C]> {
     return MatcherFunc { actualExpression, failureMessage in
-        failureMessage.postfixMessage = "equal <\(expectedValue)>"
+        failureMessage.postfixMessage = "equal <\(stringify(expectedValue))>"
         if expectedValue == nil || actualExpression.evaluate() == nil {
             failureMessage.postfixMessage += " (will not match nils, use beNil() instead)"
             return false
@@ -37,9 +37,9 @@ public func equal<T: Equatable, C: Equatable>(expectedValue: [T: C]?) -> Matcher
 }
 
 // perhaps try to extend to SequenceOf or Sequence types instead of arrays
-public func equal<T: Equatable>(expectedValue: [T]?) -> MatcherFunc<[T]?> {
+public func equal<T: Equatable>(expectedValue: [T]?) -> MatcherFunc<[T]> {
     return MatcherFunc { actualExpression, failureMessage in
-        failureMessage.postfixMessage = "equal <\(expectedValue)>"
+        failureMessage.postfixMessage = "equal <\(stringify(expectedValue))>"
         if expectedValue == nil || actualExpression.evaluate() == nil {
             failureMessage.postfixMessage += " (will not match nils, use beNil() instead)"
             return false
@@ -58,34 +58,28 @@ public func equal<T: Equatable>(expectedValue: [T]?) -> MatcherFunc<[T]?> {
     }
 }
 
-public func ==<T: Equatable>(lhs: Expectation<T?>, rhs: T?) -> Bool {
+public func ==<T: Equatable>(lhs: Expectation<T>, rhs: T?) {
     lhs.to(equal(rhs))
-    return true
 }
 
-public func !=<T: Equatable>(lhs: Expectation<T?>, rhs: T?) -> Bool {
+public func !=<T: Equatable>(lhs: Expectation<T>, rhs: T?) {
     lhs.toNot(equal(rhs))
-    return true
 }
 
-public func ==<T: Equatable>(lhs: Expectation<[T]?>, rhs: [T]?) -> Bool {
+public func ==<T: Equatable>(lhs: Expectation<[T]>, rhs: [T]?) {
     lhs.to(equal(rhs))
-    return true
 }
 
-public func !=<T: Equatable>(lhs: Expectation<[T]?>, rhs: [T]?) -> Bool {
+public func !=<T: Equatable>(lhs: Expectation<[T]>, rhs: [T]?) {
     lhs.toNot(equal(rhs))
-    return true
 }
 
-public func ==<T: Equatable, C: Equatable>(lhs: Expectation<[T: C]?>, rhs: [T: C]?) -> Bool {
+public func ==<T: Equatable, C: Equatable>(lhs: Expectation<[T: C]>, rhs: [T: C]?) {
     lhs.to(equal(rhs))
-    return true
 }
 
-public func !=<T: Equatable, C: Equatable>(lhs: Expectation<[T: C]?>, rhs: [T: C]?) -> Bool {
+public func !=<T: Equatable, C: Equatable>(lhs: Expectation<[T: C]>, rhs: [T: C]?) {
     lhs.toNot(equal(rhs))
-    return true
 }
 
 extension NMBObjCMatcher {
